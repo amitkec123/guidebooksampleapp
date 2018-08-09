@@ -38,8 +38,8 @@ class UpcomingEventsAdapter(val context: Context, val imageDownloader: ImageDown
     override fun onBindViewHolder(viewHolder: EventsViewHolder, position: Int) {
         upcomingEvents?.elementAt(position)?.also {
             viewHolder.name.text = it.name
-            setDateOnView(viewHolder.startTime, it.startDate, startDate)
-            setDateOnView(viewHolder.endTime, it.endDate, endDate)
+            setDateOnView(viewHolder.startDate, it.startDate, startDate)
+            setDateOnView(viewHolder.endDate, it.endDate, endDate)
             setEventImage(viewHolder.image, it.icon)
         }
     }
@@ -67,7 +67,7 @@ class UpcomingEventsAdapter(val context: Context, val imageDownloader: ImageDown
     class EventsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image: ImageView = itemView.findViewById(R.id.eventImage)
         val name: TextView = itemView.findViewById(R.id.eventName)
-        val startTime: TextView = itemView.findViewById(R.id.eventStart)
-        val endTime: TextView = itemView.findViewById(R.id.eventEnd)
+        val startDate: TextView = itemView.findViewById(R.id.eventStart)
+        val endDate: TextView = itemView.findViewById(R.id.eventEnd)
     }
 }
