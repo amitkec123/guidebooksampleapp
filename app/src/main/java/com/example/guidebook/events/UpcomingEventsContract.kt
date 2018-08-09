@@ -1,6 +1,7 @@
 package com.example.guidebook.events
 
 import com.example.guidebook.models.guidebook.Data
+import io.reactivex.disposables.Disposable
 
 interface UpcomingEventsContract {
     interface View {
@@ -9,6 +10,6 @@ interface UpcomingEventsContract {
     }
 
     interface UpcomingGuidesPresenter {
-        fun getUpcomingEvents()
+        fun getUpcomingEvents(): Disposable
     }
 }
