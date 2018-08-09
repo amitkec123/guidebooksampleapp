@@ -21,10 +21,10 @@ import com.example.guidebook.request.ImagesApi
 import io.reactivex.disposables.Disposable
 
 class UpcomingEventsFragment : Fragment(), UpcomingEventsContract.View {
-    lateinit var guidesPresenterImpl: UpcomingGuidesPresenterImpl
-    lateinit var upcomingEventsAdapter: UpcomingEventsAdapter
-    lateinit var eventsRecyclerView: RecyclerView
-    lateinit var refreshLayout: SwipeRefreshLayout
+    private lateinit var guidesPresenterImpl: UpcomingGuidesPresenterImpl
+    private lateinit var upcomingEventsAdapter: UpcomingEventsAdapter
+    private lateinit var eventsRecyclerView: RecyclerView
+    private lateinit var refreshLayout: SwipeRefreshLayout
 
     private var disposable: Disposable? = null
 

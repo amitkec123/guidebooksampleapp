@@ -14,16 +14,16 @@ import com.example.guidebook.images.DownloadedImage
 import com.example.guidebook.images.ImageDownloader
 import com.example.guidebook.models.guidebook.Data
 
-class UpcomingEventsAdapter(val context: Context, val imageDownloader: ImageDownloader) : RecyclerView.Adapter<UpcomingEventsAdapter.EventsViewHolder>() {
-    var upcomingEvents: List<Data>? = null
+class UpcomingEventsAdapter(private val context: Context, private val imageDownloader: ImageDownloader) : RecyclerView.Adapter<UpcomingEventsAdapter.EventsViewHolder>() {
+    internal var upcomingEvents: List<Data>? = null
     private val startDate: String
     private val endDate: String
     private val loadingDrawable: Drawable
 
     init {
         val resources = context.resources
-        startDate = resources.getString(R.string.event_start);
-        endDate = resources.getString(R.string.event_end);
+        startDate = resources.getString(R.string.event_start)
+        endDate = resources.getString(R.string.event_end)
         loadingDrawable = ColorDrawable(ResourcesCompat.getColor(resources, R.color.event_others_color, context.theme))
     }
 
