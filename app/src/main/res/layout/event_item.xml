@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingEnd="@dimen/margin_8">
+
+    <ImageView
+        android:id="@+id/eventImage"
+        style="@style/EventImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eventName"
+        style="@style/EventName"
+        app:layout_constraintStart_toEndOf="@+id/eventImage"
+        app:layout_constraintTop_toTopOf="parent"
+        android:singleLine="false"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/eventStart"
+        style="@style/EventStart"
+        app:layout_constraintStart_toEndOf="@+id/eventImage"
+        app:layout_constraintTop_toBottomOf="@+id/eventName"
+        tools:text="Group" />
+
+    <TextView
+        android:id="@+id/eventEnd"
+        style="@style/EventStart.LastItem"
+        android:layout_marginBottom="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eventImage"
+        app:layout_constraintTop_toBottomOf="@+id/eventStart"
+        tools:text="TextView" />
+</android.support.constraint.ConstraintLayout>

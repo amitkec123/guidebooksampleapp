@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GuideBookSample</string>
+
+    <string name="event_start">Starts: %s</string>
+    <string name="event_end">Ends: %s</string>
+
+    <string name="error_loading_events">Error in loading events. Pull down to refresh again.</string>
+</resources>
